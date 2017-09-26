@@ -6,8 +6,8 @@ public class Circle {
     private double radius;
     private static int numberOfCircles;
 
-    public Circle(double rad){
-        radius = rad;
+    public Circle(double radius){
+        this.radius = radius;
         numberOfCircles++;
     }
 

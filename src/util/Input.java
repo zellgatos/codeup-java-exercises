@@ -3,7 +3,11 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+
+    public Input(){
+        scanner = new Scanner(System.in);
+    }
 
     public String getString(){
         String userInputString = scanner.nextLine();
@@ -11,12 +15,8 @@ public class Input {
     }
 
     public boolean yesOrNo(){
-        String yesNo = getString();
-        if (yesNo.equalsIgnoreCase("yes") || yesNo.equalsIgnoreCase("y")){
-            return true;
-        } else {
-            return false;
-        }
+        String yesNo = this.scanner.nextLine();
+         return yesNo.equalsIgnoreCase("yes") || yesNo.equalsIgnoreCase("y");
     }
 
     public int getInt(){
