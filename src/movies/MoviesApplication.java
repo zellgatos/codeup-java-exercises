@@ -29,7 +29,7 @@ public class MoviesApplication {
                     break;
                 case 1:
                     for(Movie movie : movies.findAll()){
-                        System.out.println(movie.getName()+" : "+movie.getCategory());
+                        System.out.println(movie.getName() + " : " + movie.getCategory());
                     }
                     break;
                 case 2:
