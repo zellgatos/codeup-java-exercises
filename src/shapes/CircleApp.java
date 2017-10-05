@@ -8,11 +8,9 @@ public class CircleApp {
         boolean userBoolean;
 
         while(true) {
-            System.out.println("Enter the radius of the circle");
-            Circle thisCircle = new Circle(input.getDouble());
+            Circle thisCircle = new Circle(input.getDouble("Enter the radius of the circle"));
             System.out.println("The area of the circle is:" + thisCircle.getArea() + "\nThe circumference is: " + thisCircle.getCircumference() + ".");
-            System.out.println("Would you like to make another circle?");
-            userBoolean = input.yesOrNo();
+            userBoolean = input.yesOrNo("Would you like to make another circle?");
             if (!userBoolean) {
                 System.out.println("ok");
             } else { Circle.displayNumOfCircles();

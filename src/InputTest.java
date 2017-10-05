@@ -7,24 +7,24 @@ public class InputTest {
         boolean userBoolean;
         int userInt;
         double userDouble;
-        userInput = inputTest.getString();
+        userInput = inputTest.getString("say something:");
 
-        userBoolean = inputTest.yesOrNo();
+        userBoolean = inputTest.yesOrNo("continue? y/n");
         System.out.println(userBoolean);
 
-        userInt = inputTest.getInt();
+        userInt = inputTest.getInt("enter an integer:");
         System.out.println(userInt);
 
-        userInt = inputTest.getInt(5, 80);
+        userInt = inputTest.getInt("enter an integer:", 5, 80);
         System.out.println(userInt);
 
-        userDouble = inputTest.getDouble();
+        userDouble = inputTest.getDouble("enter a double:");
         System.out.println(userDouble);
 
         userDouble = inputTest.getDouble(1, 100);
         System.out.println(userDouble);
 
-        userInput = inputTest.getString();
+        userInput = inputTest.getString("say something:");
         System.out.println(userInput);
 
     }
