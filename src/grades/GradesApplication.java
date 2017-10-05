@@ -96,8 +96,7 @@ public class GradesApplication {
                     break;
                 }
             }
-            System.out.println("Would you like to select another?");
-            if (!input.yesOrNo()) {
+            if (!input.yesOrNo("Would you like to select another?")) {
                 System.out.println("Laterz!");
                 break;
             }

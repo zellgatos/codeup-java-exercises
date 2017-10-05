@@ -88,6 +88,7 @@ public class ContactsApp {
         Input input = new Input();
         System.out.println("Enter the name of your contact that you want to delete.");
         String name = input.getString();
+
         contacts.removeIf(contact -> {
             if (contact.contains(name) && input.yesOrNo("Delete " + contact + ", Y/N?")) {
                 System.out.println("That contact " + contact + " has been removed.");
