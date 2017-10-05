@@ -7,7 +7,8 @@ public class InputTest {
         boolean userBoolean;
         int userInt;
         double userDouble;
-        userInput = inputTest.getString("say something:");
+        userInput = inputTest.getString();
+        System.out.println("say something:");
 
         userBoolean = inputTest.yesOrNo("continue? y/n");
         System.out.println(userBoolean);
@@ -24,7 +25,7 @@ public class InputTest {
         userDouble = inputTest.getDouble(1, 100);
         System.out.println(userDouble);
 
-        userInput = inputTest.getString("say something:");
+        userInput = inputTest.getString();
         System.out.println(userInput);
 
     }

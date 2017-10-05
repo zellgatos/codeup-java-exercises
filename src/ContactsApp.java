@@ -57,8 +57,10 @@ public class ContactsApp {
 
     public static void addContact(List<String> contacts){
         Input input = new Input();
-        String name = input.getString("Enter the name of your contact: ");
-        String phoneNumber = input.getString("Enter the contact's phone number: ");
+        System.out.println("Enter the name of your contact: ");
+        String name = input.getString();
+        System.out.println("Enter the contact's phone number: ");
+        String phoneNumber = input.getString();
         if (phoneNumber.length() == 7){
             phoneNumber = phoneNumber.substring (0, 3) + "-" + phoneNumber.substring(3);
         } else if (phoneNumber.length() == 10){
@@ -72,7 +74,8 @@ public class ContactsApp {
 
     public static void searchContact(List<String> contacts){
         Input input = new Input();
-        String name = input.getString("Enter contact name to search: ");
+        System.out.println("Enter contact name to search: ");
+        String name = input.getString();
 
         for(String contact : contacts){
             if(contact.contains(name)){
@@ -83,7 +86,8 @@ public class ContactsApp {
 
     public static void deleteContact(List<String> contacts){
         Input input = new Input();
-        String name = input.getString("Enter the name of your contact that you want to delete.");
+        System.out.println("Enter the name of your contact that you want to delete.");
+        String name = input.getString();
         contacts.removeIf(contact -> {
             if (contact.contains(name) && input.yesOrNo("Delete " + contact + ", Y/N?")) {
                 System.out.println("That contact " + contact + " has been removed.");

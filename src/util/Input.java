@@ -9,8 +9,7 @@ public class Input {
         scanner = new Scanner(System.in);
     }
 
-    public String getString(String prompt){
-        System.out.println(prompt);
+    public String getString(){
         String userInput;
 
         try {
@@ -18,7 +17,7 @@ public class Input {
         } catch (IllegalArgumentException e ) {
             System.out.println("Error - Input must be valid");
             scanner.next();
-            return getString(prompt);
+            return getString();
         }
         return userInput;
     }
