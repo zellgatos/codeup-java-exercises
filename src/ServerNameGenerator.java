@@ -15,7 +15,7 @@ public class ServerNameGenerator {
         do{
             ServerNameGenerator server = new ServerNameGenerator();
             String randomName = server.getRandomArray(server.adjs)+"-"+server.getRandomArray(server.nouns);
-            System.out.println("here is your server name: " + randomName);}while(input.yesOrNo());
+            System.out.println("here is your server name: " + randomName);}while(input.yesOrNo("would you like to continue?"));
 
     }
     public int randomNum(int max, int min){
